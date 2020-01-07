@@ -1,10 +1,13 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"sync"
 
-	"github.com/jandos/gofine"
+	"github.com/silentred/gid"
+
+	"github.com/tsingson/cpuaffinity/gofine"
 )
 
 func main() {
@@ -15,7 +18,7 @@ func main() {
 	}
 
 	log.Printf("Available worker count: %v\n", env.LgoreCount())
-
+	fmt.Println("main", gid.Get())
 	var wg sync.WaitGroup
 	wg.Add(1)
 	go func(lgoreId int) {
@@ -28,6 +31,7 @@ func main() {
 
 		incrementMeHard := 0
 		for {
+			fmt.Println("main", gid.Get())
 			// do non-interruptible super important work
 			// open up htop and verify that goroutine doesn't jump around
 			// and runs on the specified core index

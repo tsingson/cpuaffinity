@@ -1,11 +1,16 @@
-# LGORE
-CPU Affinity for Go goroutines (Unix systems only)
+#  cpu affinity for go goroutine
 
-## Warnings
-Use at your own risk
+pin goroutine to cpu core , linux / unix  only, for testing and research 
 
-## Usage
-TODO
+## 1. code copyright
 
-## Why
-TODO
+/goine fork from https://github.com/jandos/gofine  by Zhandos Zhylkaidar ( jandos ). --- unix only 
+
+/affinity copy from  https://pythonwise.blogspot.com/2019/03/cpu-affinity-in-go.html by Miki Tebeka --- linux only 
+
+## 2.   DO NOT use in product
+
+Do not use in product,   ASIS
+
+## 3. example
+check example path

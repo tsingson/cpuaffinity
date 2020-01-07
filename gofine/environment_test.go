@@ -1,13 +1,11 @@
-package gofine_test
+package gofine
 
 import (
 	"testing"
-
-	"github.com/jandos/gofine"
 )
 
 var (
-	env = &gofine.Environment{}
+	env = &Environment{}
 )
 
 func TestProcess(t *testing.T) {
@@ -32,7 +30,7 @@ func TestProcess(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if state != gofine.Busy {
+	if state != Busy {
 		t.Fatal("lgore state should be Busy")
 	}
 
@@ -45,7 +43,7 @@ func TestProcess(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if state != gofine.Available {
+	if state != Available {
 		t.Fatal("lgore state should be Available")
 	}
 }
