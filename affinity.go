@@ -1,6 +1,6 @@
 /* CPU affinity in Go , only run in linux , build in linux first */
 
-package affinity
+package cpuaffinity
 
 import (
 	"runtime"
