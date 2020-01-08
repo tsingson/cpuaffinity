@@ -1,4 +1,4 @@
-package gofine
+package cpuaffinity
 
 import (
 	"testing"

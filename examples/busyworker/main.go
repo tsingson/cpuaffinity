@@ -7,11 +7,11 @@ import (
 
 	"github.com/silentred/gid"
 
-	"github.com/tsingson/cpuaffinity/gofine"
+	"github.com/tsingson/cpuaffinity"
 )
 
 func main() {
-	var env gofine.Environment
+	var env cpuaffinity.Environment
 	err := env.InitDefault()
 	if err != nil {
 		panic(err)
